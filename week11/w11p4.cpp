@@ -149,6 +149,15 @@ public:
         cout << cnt << '\n';
     }
 
+void depth_(int key){
+        Node* cur = search(key);
+        int cnt = 0;
+        while(cur != root){
+            cur = cur->par;
+            ++cnt;
+        }
+        cout << cnt << '\n';
+    }
     void inOrder(Node *p) {
         if (p->left != NULL) {
             inOrder(p->left);
